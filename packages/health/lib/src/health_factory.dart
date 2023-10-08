@@ -401,7 +401,7 @@ class HealthFactory {
     if (dataType == HealthDataType.BODY_MASS_INDEX && _platformType == PlatformType.ANDROID) {
       return _computeAndroidBMI(startTime, endTime);
     }
-    return await _dataQuery(startTime, endTime, dataType);
+    return await _dataQuery(startTime, endTime, dataType, limit: limit);
   }
 
   /// Fetches data points from Android/iOS native code.
